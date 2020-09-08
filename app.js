@@ -35,7 +35,6 @@ app.get('/group',(req,res)=>{
     groupname=getData();
     dbOpencourse.serialize(function () {
         dbOpencourse.all(`SELECT * FROM ${groupname}`, (err, rows) => {
-            console.log(rows);
             if (err) console.error(err);
             res.json(rows);
         });
