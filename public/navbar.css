@@ -1,0 +1,125 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+body {
+    position: relative;
+    font-family: '微軟正黑體';
+
+}
+
+.navcontent {
+    display: none;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.navcontent div a {
+    display: inline-block;
+}
+
+.navcontent div .second {
+    display: none;
+    margin-top: 0px;
+}
+
+.navcontent div .second a {
+    display: block;
+    color: black;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.container {
+    margin-bottom: 80px;
+}
+
+.bread {
+    width: 100%;
+    border:none;
+}
+
+.bread .breadcrumb {
+    background-color: transparent;
+    margin-bottom: 0;
+
+}
+
+
+#control:checked~.link {
+    display: none;
+    transition: .6s;
+}
+
+#control:checked+.title label .fa {
+    transform: scaleY(-1);
+}
+
+#first:checked~.navcontent {
+    display: block;
+
+}
+
+#first-one:checked~.second {
+    display: block;
+}
+
+#first-three:checked~.second {
+    display: block;
+}
+
+#first-four:checked~.second {
+    display: block;
+}
+
+#first-five:checked~.second {
+    display: block;
+}
+
+#first-six:checked~.second {
+    display: block;
+}
+
+#first-seven:checked~.second {
+    display: block;
+}
+
+#first-eight:checked~.second {
+    display: block;
+}
+
+#first-nine:checked~.second {
+    display: block;
+}
+
+#first-ten:checked~.second {
+    display: block;
+}
+
+#first-eleven:checked~.second {
+    display: block;
+}
+
+#first-twelve:checked~.second {
+    display: block;
+}
+
+#first-thirteen:checked~.second {
+    display: block;
+}
+
+#first-fourteen:checked~.second {
+    display: block;
+}
+

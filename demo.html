@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <div id="list">
+
+    </div>
+</body>
+<script>
+    // 放下面是因為等頁面loading完才執行
+    fetch('/edu/datas')
+        .then(res => res.json())
+        .then(datas => {
+            var listArea = $('#list');
+            datas.forEach(data => {
+                Object.keys(data).forEach(key => {
+                    listArea.append(
+                        $('<p></p>').text(`${key} 為 ${data[key]}`)
+                    );
+                })
+            });
+        })
+</script>
+
+</html>

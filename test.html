@@ -1,0 +1,26 @@
+// 這邊單純給畫面!
+app.get('/demo', (req, res) => {
+    res.sendFile(path.join(__dirname, 'demo.html'))
+});
+
+// 這邊做為api給demo頁使用!!
+app.get('/edu/datas', (req, res) => {
+    db.serialize(function () {
+        db.all(`SELECT * FROM  電腦運用類`, (err, rows) => {
+            if (err) console.error(err);
+
+            res.json(rows);
+
+        });
+    })
+});
+
+function render(filename, params, callback) {
+    fs.readFile(filename, 'utf8', function (err, data) {
+        if (err) return cabllack(err);
+        for (var key in params) {
+            data = data.replace('{' + key + '}', params[key]);
+        }
+        callback(null, data); // 用 callback 傳回結果
+    });
+}

@@ -1,0 +1,67 @@
+.wrap {
+    width: 100%;
+    background-color: #233D4D;
+    color:#fff;
+    min-height: 540px;
+}
+
+.cource {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.cource .title {
+    text-align: center;
+    font-size:30px;
+    
+}
+
+.cource .courceContent {
+    display: flex;
+    justify-content: center;
+    margin:10px 25px;
+    
+}
+
+.courceContent .column {
+    margin: 10px 20px;
+    width: 100%;
+    
+}
+.courceContent .column div{
+    background-color: rgba(238, 240, 235);
+}
+
+
+.courceContent .column .group {
+    color: #233D4D;
+    font-weight: bold;
+    background-color:#FF8811;  
+    padding: 5px;
+    text-align:center;
+}
+
+.courceContent .column .second a {
+    padding: 5px;
+    text-decoration: none;
+    color:#000;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+.courceContent .column .second a:focus{
+    color:#336666;
+}
+
+.courceContent .column .second a+a {
+    border-top: 1px solid rgba(0, 0, 0, .2);
+}
+
+.column div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+               

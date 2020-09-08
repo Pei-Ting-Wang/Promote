@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>開放式課程</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./navbar.css">
+    <link rel="stylesheet" type="text/css" href="./footer.css">
+    <link rel="stylesheet" type="text/css" href="./openCource.css">
+
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Linbrary</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">首頁</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/open">開放式課程</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/edu">推廣教育<label for="first"
+                            style="margin-bottom:0px; padding-left:5px;"><i class="fa fa-angle-down"
+                                style="margin-bottom:0px;"></i></label></a>
+                    <input type="checkbox" id="first">
+                    <div class="navcontent">
+                        <div>
+                            <a>資訊學群</a>
+                            <input type="checkbox" id="first-one">
+                            <label for="first-one"><i class="fa fa-angle-down"></i></label>
+                            <div class="second">
+                                <a href="/edu/classify?type=資訊學群&classify=軟體應用開發學類" class="classifyName">軟體應用開發學類</a>
+                                <a href="/edu/classify?type=資訊學群&classify=網路應用開發學類" class="classifyName">網路應用開發學類</a>
+                                <a href="/edu/classify?type=資訊學群&classify=電腦運用類" class="classifyName">電腦運用類</a>
+                            </div>
+                            <div>
+                                <a>工程學群</a>
+                                <label for="first" style="display:absolute; opacity: 0;"><i
+                                        class="fa fa-angle-down"></i></label>
+                            </div>
+                            <div>
+                                <a>數理化學群</a>
+                                <input type="checkbox" id="first-three">
+                                <label for="first-three"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=數理化學群&classify=數學學類">數學學類</a>
+                                    <a href="/edu/classify?type=數理化學群&classify=物理學類">物理學類</a>
+                                    <a href="/edu/classify?type=數理化學群&classify=化學學類">化學學類</a>
+                                </div>
+                            </div>
+                            <div>
+                                <a>醫藥衛生學群</a>
+                                <input type="checkbox" id="first-four">
+                                <label for="first-four"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=醫藥衛生學群&classify=醫療與護理學類">醫療與護理學類</a>
+                                    <a href="/edu/classify?type=醫藥衛生學群&classify=營養學類">營養學類</a>
+                                    <a href="/edu/classify?type=醫藥衛生學群&classify=公共衛生學類">公共衛生學類</a>
+                                </div>
+                            </div>
+                            <div>
+                                <a>自然科學學群</a>
+                                <input type="checkbox" id="first-five">
+                                <label for="first-five"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=醫藥衛生學群&classify=生命科學學類">生命科學學類</a>
+                                    <a href="/edu/classify?type=醫藥衛生學群&classify=環境科學學類">環境科學學類</a>
+                                    <a href="/edu/classify?type=醫藥衛生學群&classify=地球科學學類">地球科學學類</a>
+                                </div>
+                            </div>
+                            <div>
+                                <a>文史哲學群</a>
+                                <input type="checkbox" id="first-six">
+                                <label for="first-six"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=文史哲學群&classify=中國文學類">中國文學類</a>
+                                    <a href="/edu/classify?type=文史哲學群&classify=歷史學">歷史學類</a>
+                                    <a href="/edu/classify?type=文史哲學群&classify=哲學學類">哲學學類</a>
+
+                                </div>
+                            </div>
+                            <div>
+                                <a>商業與管理學群</a>
+                                <input type="checkbox" id="first-seven">
+                                <label for="first-seven"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=商業與管理學群&classify=歷史學類">歷史學類</a>
+                                    <a href="/edu/classify?type=商業與管理學群&classify=哲學學類">哲學學類</a>
+                                    <a href="/edu/classify?type=商業與管理學群&classify=管理學類">管理學類</a>
+                                </div>
+                            </div>
+                            <div>
+                                <a>藝術學群</a>
+                                <input type="checkbox" id="first-eight">
+                                <label for="first-eight"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=藝術學群&classify=音樂學類">音樂學類</a>
+                                    <a href="/edu/classify?type=藝術學群&classify=美術學類">美術學類</a>
+                                    <a href="/edu/classify?type=藝術學群&classify=戲劇學類">戲劇學類</a>
+                                    <a href="/edu/classify?type=藝術學群&classify=電影與新媒體學類">電影與新媒體學類</a>
+                                    <a href="/edu/classify?type=藝術學群&classify=其他學類">其他學類</a>
+                                </div>
+                            </div>
+                            <div>
+                                <a>社會與心理學群</a>
+                                <input type="checkbox" id="first-nine">
+                                <label for="first-nine"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=社會與心理學群&classify=法律類">法律類</a>
+                                    <a href="/edu/classify?type=社會與心理學群&classify=政治學類">政治學類</a>
+                                    <a href="/edu/classify?type=社會與心理學群&classify=教育學類">教育學類</a>
+                                    <a href="/edu/classify?type=社會與心理學群&classify=公共行政與社會工作類">公共行政與社會工作類</a>
+                                    <a href="/edu/classify?type=社會與心理學群&classify=心理學類">心理學類</a>
+                                    <a href="/edu/classify?type=社會與心理學群&classify=其他社會學類">其他社會學類</a>
+                                </div>
+                            </div>
+                            <div>
+                                <a>大眾傳播學群</a>
+                                <input type="checkbox" id="first-ten">
+                                <label for="first-ten"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=大眾傳播學群&classify=新聞學類">新聞學類</a>
+                                    <a href="/edu/classify?type=大眾傳播學群&classify=廣告學類">廣告學類</a>
+                                    <a href="/edu/classify?type=大眾傳播學群&classify=廣播學類">廣播學類</a>
+                                    <a href="/edu/classify?type=大眾傳播學群&classify=其他學類">其他學類</a>
+                                </div>
+                            </div>
+                            <div>
+                                <a>語言學群</a>
+                                <input type="checkbox" id="first-eleven">
+                                <label for="first-eleven"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=語言學群&classify=英語文學類">英語文學類</a>
+                                    <a href="/edu/classify?type=語言學群&classify=漢語文學學類">漢語文學學類</a>
+                                    <a href="/edu/classify?type=語言學群&classify=歐語文學類">歐語文學類</a>
+                                    <a href="/edu/classify?type=語言學群&classify=東方語文學類">東方語文學類</a>
+                                    <a href="/edu/classify?type=語言學群&classify=日語文學類">日語文學類</a>
+
+                                </div>
+                            </div>
+                            <div>
+                                <a>休憩與運動學群</a>
+                                <input type="checkbox" id="first-twelve">
+                                <label for="first-twelve"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=休憩與運動學群&classify=體育學類">體育學類</a>
+                                    <a href="/edu/classify?type=休憩與運動學群&classify=休憩學類">休憩學類</a>
+                                </div>
+                            </div>
+                            <div>
+                                <a>建築與設計學群</a>
+                                <input type="checkbox" id="first-thirteen">
+                                <label for="first-thirteen"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=建築與設計學群&classify=數位媒體">數位媒體設計學類</a>
+                                    <a href="/edu/classify?type=建築與設計學群&classify=建築學類">建築學類</a>
+                                    <a href="/edu/classify?type=建築與設計學群&classify=都市計畫學類">都市計畫學類</a>
+                                    <a href="/edu/classify?type=建築與設計學群&classify=景觀與空間設計類">景觀與空間設計類</a>
+                                    <a href="/edu/classify?type=建築與設計學群&classify=工業設計學類">工業設計學類</a>
+                                    <a href="/edu/classify?type=建築與設計學群&classify=工藝學類">工藝學類</a>
+                                    <a href="/edu/classify?type=建築與設計學群&classify=商業設計學類">商業設計學類</a>
+                                    <a href="/edu/classify?type=建築與設計學群&classify=時尚與服裝設計學類">時尚與服裝設計學類</a>
+                                    <a href="/edu/classify?type=建築與設計學群&classify=藝術與設計學類">藝術與設計學類</a>
+                                    <a href="/edu/classify?type=建築與設計學群&classify=其他學類">其他學類</a>
+
+                                </div>
+                            </div>
+                            <div>
+                                <a>生涯學群</a>
+                                <input type="checkbox" id="first-fourteen">
+                                <label for="first-fourteen"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=生涯學群&classify=資訊科技">資訊科技</a>
+                                    <a href="/edu/classify?type=生涯學群&classify=綜合知識">綜合知識</a>
+                                    <a href="/edu/classify?type=生涯學群&classify=行銷流通">行銷流通</a>
+                                    <a href="/edu/classify?type=生涯學群&classify=財務融通">財務融通</a>
+                                    <a href="/edu/classify?type=生涯學群&classify=人力資源">人力資源</a>
+                                    <a href="/edu/classify?type=生涯學群&classify=創業育成">創業育成</a>
+                                    <a href="/edu/classify?type=生涯學群&classify=證照檢定">證照檢定</a>
+                                </div>
+                            </div>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career">生涯規劃</a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+
+
+    </nav>
+    <!-- 主要內容 -->
+    <div class="wrap">
+        <!-- 麵包屑 -->
+        <div class="bread">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">首頁</a></li>
+                    <li class="breadcrumb-item">開放式課程</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="cource">
+            <div class="title">學群分類</div>
+            <div class="courceContent">
+                <div class="column">
+                    <div class="classifyName">
+                        <a class="group" href="./opendata?type=語言學群">語言學群</a>
+                    </div>
+                    <div class="classifyName">
+                        <a class="group"  href="./opendata?type=文史哲學群" >文史哲學群</a>
+                    </div>
+                    <div class="classifyName">
+                        <a class="group" href="./opendata?type=數理化學群">數理化學群</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="classifyName">
+                        <a class="group" href="./opendata?type=自然科學學群">自然科學學群</a>
+                    </div>
+                    <div class="classifyName">
+                        <a class="group" href="./opendata?type=社會與心理學群">社會與心理學群</a>
+                    </div>
+                    <div class="classifyName">
+                        <a class="group" href="./opendata?type=商業與管理學群">商業與管理學群</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="classifyName">
+                        <a class="group">法政學群</a>
+                    </div>
+                    <div class="classifyName">
+                        <a class="group">工程學群</a>
+                    </div>
+                    <div class="classifyName">
+                        <a class="group">資訊學群</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="classifyName">
+                        <a class="group" href="./opendata?type=醫藥衛生學群">醫藥衛生學群</a>
+                    </div>
+                    <div class="classifyName">
+                        <a class="group" href="./opendata?type=傳播學群">傳播學群</a>
+                    </div>
+                    <div class="classifyName">
+                        <a class="group" href="./opendata?type=藝術學群">藝術學群</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="classifyName">
+                        <a class="group" href="./opendata?type=建築學群">建築學群</a>
+                    </div>
+                    <div class="classifyName">
+                        <a class="group" href="./opendata?type=休憩與運動學群">休憩與運動學群</a>
+                    </div>
+                    <div class="classifyName">
+                        <a class="group" href="./opendata?type=磨課師">磨課師</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="classifyName">
+                        <a class="group" href="./opendata?type=資訊科技學群">資訊科技學群</a>
+                    </div>
+                    <div class="classifyName">
+                        <a class="group" href="./opendata?type=綜合知識學群">綜合知識學群</a>
+                    </div>
+                    <div class="classifyName">
+                        <a class="group" href="./opendata?type=行銷流通學群">行銷流通學群</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="classifyName">
+                        <div class="group" href="./opendata?type=財務融通學群">財務融通學群</div>
+                    </div>
+                    <div class="classifyName" href="./opendata?type=人力資源學群">
+                        <div class="group">人力資源學群</div>
+                    </div>
+                    <div class="classifyName">
+                        <a class="group" href="./opendata?type=創業育成學群">創業育成學群</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mainfooter text-center">
+        &copy; copyright by BraveDogTeam 2020
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+</body>
+<script>
+</script>
+
+</html>

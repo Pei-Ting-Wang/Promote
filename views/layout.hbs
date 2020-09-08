@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{content}}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+        }
+
+        body {
+            position: relative;
+            font-family: '微軟正黑體';
+
+
+        }
+
+        .navcontent {
+            display: none;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+
+        .navcontent div a {
+            display: inline-block;
+        }
+
+        .navcontent div .second {
+            display: none;
+            margin-top: 0px;
+        }
+
+        .navcontent div .second a {
+            display: block;
+            color: black;
+            margin-bottom: 5px;
+            margin-left: 10px;
+        }
+
+        .container {
+            margin-bottom: 80px;
+        }
+
+        .bread {
+            width: 100%;
+            border: none;
+            font-size:14px;
+        }
+
+        .bread .breadcrumb {
+            background-color: transparent;
+            margin-bottom: 0;
+
+        }
+
+        .item-list {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .item-list .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0px;
+            background-color: rgba(255, 255, 255, .4);
+            max-width: 960px;
+
+        }
+
+        .item-list .title {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            font-size: 22px;
+            padding: 8px;
+            width: 100%;
+            color: #fff;
+            text-align: center;
+            background-color: rgb(144, 190, 216);
+        }
+
+        .item-list .title p {
+            margin: auto;
+        }
+
+        .item-list .link {
+            text-align: left;
+            width: 100%;
+            padding: 10px;
+            display: block;
+
+
+        }
+
+        .item-list .link a {
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            margin-bottom: 5px;
+        }
+
+        .item .title label {
+            position: absolute;
+            right: 30px;
+        }
+
+        #control:checked~.link {
+            display: none;
+            transition: .6s;
+        }
+
+        #control:checked+.title label .fa {
+            transform: scaleY(-1);
+        }
+
+        #first:checked~.navcontent {
+            display: block;
+
+        }
+
+        #first-one:checked~.second {
+            display: block;
+        }
+
+        #first-three:checked~.second {
+            display: block;
+        }
+
+        #first-four:checked~.second {
+            display: block;
+        }
+
+        #first-five:checked~.second {
+            display: block;
+        }
+
+        #first-six:checked~.second {
+            display: block;
+        }
+
+        #first-seven:checked~.second {
+            display: block;
+        }
+
+        #first-eight:checked~.second {
+            display: block;
+        }
+
+        #first-nine:checked~.second {
+            display: block;
+        }
+
+        #first-ten:checked~.second {
+            display: block;
+        }
+
+        #first-eleven:checked~.second {
+            display: block;
+        }
+
+        #first-twelve:checked~.second {
+            display: block;
+        }
+
+        #first-thirteen:checked~.second {
+            display: block;
+        }
+
+        #first-fourteen:checked~.second {
+            display: block;
+        }
+
+        .wrap {
+            width: 100%;
+            background-color: #233D4D;
+            color: #fff;
+            min-height:480px;
+        }
+
+        .cource {
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+         
+        }
+
+        .cource .title {
+            text-align: center;
+            font-size: 28px;
+            color: #fff;
+           
+
+
+        }
+
+        .cource .courceContent {
+            display: flex;
+            justify-content: center;
+            margin: 10px 20px;
+
+        }
+
+        .courceContent .column {
+            margin: 10px 20px;
+            width: 100%;
+
+        }
+        .courceContent .column .second a {
+            padding: 5px;
+            text-decoration: none;
+            color: #fff;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+        }
+        .courceContent .column .second a:focus {
+            color: #336666;
+        }
+
+        .courceContent .column .second a+a {
+            border-top: 1px solid rgba(255, 255, 255, .2);
+        }
+
+        .column div {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 5px;
+        }
+
+        .mainfooter {
+            height: 140px;
+            padding: 15px;
+            background-color: #333333;
+            text-align: center;
+            color: #fff;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+      <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Linbrary</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">首頁</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/open">開放式課程</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/edu">推廣教育<label for="first"
+                            style="margin-bottom:0px; padding-left:5px;"><i class="fa fa-angle-down"
+                                style="margin-bottom:0px;"></i></label></a>
+                    <input type="checkbox" id="first">
+                    <div class="navcontent">
+                        <div>
+                            <a>資訊學群</a>
+                            <input type="checkbox" id="first-one">
+                            <label for="first-one"><i class="fa fa-angle-down"></i></label>
+                            <div class="second">
+                                <a href="/edu/classify?type=資訊學群&classify=軟體應用開發學類" class="classifyName">軟體應用開發學類</a>
+                                <a href="/edu/classify?type=資訊學群&classify=網路應用開發學類" class="classifyName">網路應用開發學類</a>
+                                <a href="/edu/classify?type=資訊學群&classify=電腦運用類" class="classifyName">電腦運用類</a>
+                            </div>
+                            <div>
+                                <a>工程學群</a>
+                                <label for="first" style="display:absolute; opacity: 0;"><i
+                                        class="fa fa-angle-down"></i></label>
+                            </div>
+                            <div>
+                                <a>數理化學群</a>
+                                <input type="checkbox" id="first-three">
+                                <label for="first-three"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=數理化學群&classify=數學學類">數學學類</a>
+                                    <a href="/edu/classify?type=數理化學群&classify=物理學類">物理學類</a>
+                                    <a href="/edu/classify?type=數理化學群&classify=化學學類">化學學類</a>
+                                </div>
+                            </div>
+                            <div>
+                                <a>醫藥衛生學群</a>
+                                <input type="checkbox" id="first-four">
+                                <label for="first-four"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=醫藥衛生學群&classify=醫療與護理學類">醫療與護理學類</a>
+                                    <a href="/edu/classify?type=醫藥衛生學群&classify=營養學類">營養學類</a>
+                                    <a href="/edu/classify?type=醫藥衛生學群&classify=公共衛生學類">公共衛生學類</a>
+                                </div>
+                            </div>
+                            <div>
+                                <a>自然科學學群</a>
+                                <input type="checkbox" id="first-five">
+                                <label for="first-five"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=醫藥衛生學群&classify=生命科學學類">生命科學學類</a>
+                                    <a href="/edu/classify?type=醫藥衛生學群&classify=環境科學學類">環境科學學類</a>
+                                    <a href="/edu/classify?type=醫藥衛生學群&classify=地球科學學類">地球科學學類</a>
+                                </div>
+                            </div>
+                            <div>
+                                <a>文史哲學群</a>
+                                <input type="checkbox" id="first-six">
+                                <label for="first-six"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=文史哲學群&classify=中國文學類">中國文學類</a>
+                                    <a href="/edu/classify?type=文史哲學群&classify=歷史學">歷史學類</a>
+                                    <a href="/edu/classify?type=文史哲學群&classify=哲學學類">哲學學類</a>
+
+                                </div>
+                            </div>
+                            <div>
+                                <a>商業與管理學群</a>
+                                <input type="checkbox" id="first-seven">
+                                <label for="first-seven"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=商業與管理學群&classify=歷史學類">歷史學類</a>
+                                    <a href="/edu/classify?type=商業與管理學群&classify=哲學學類">哲學學類</a>
+                                    <a href="/edu/classify?type=商業與管理學群&classify=管理學類">管理學類</a>
+                                </div>
+                            </div>
+                            <div>
+                                <a>藝術學群</a>
+                                <input type="checkbox" id="first-eight">
+                                <label for="first-eight"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=藝術學群&classify=音樂學類">音樂學類</a>
+                                    <a href="/edu/classify?type=藝術學群&classify=美術學類">美術學類</a>
+                                    <a href="/edu/classify?type=藝術學群&classify=戲劇學類">戲劇學類</a>
+                                    <a href="/edu/classify?type=藝術學群&classify=電影與新媒體學類">電影與新媒體學類</a>
+                                    <a href="/edu/classify?type=藝術學群&classify=其他學類">其他學類</a>
+                                </div>
+                            </div>
+                            <div>
+                                <a>社會與心理學群</a>
+                                <input type="checkbox" id="first-nine">
+                                <label for="first-nine"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=社會與心理學群&classify=法律類">法律類</a>
+                                    <a href="/edu/classify?type=社會與心理學群&classify=政治學類">政治學類</a>
+                                    <a href="/edu/classify?type=社會與心理學群&classify=教育學類">教育學類</a>
+                                    <a href="/edu/classify?type=社會與心理學群&classify=公共行政與社會工作類">公共行政與社會工作類</a>
+                                    <a href="/edu/classify?type=社會與心理學群&classify=心理學類">心理學類</a>
+                                    <a href="/edu/classify?type=社會與心理學群&classify=其他社會學類">其他社會學類</a>
+                                </div>
+                            </div>
+                            <div>
+                                <a>大眾傳播學群</a>
+                                <input type="checkbox" id="first-ten">
+                                <label for="first-ten"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=大眾傳播學群&classify=新聞學類">新聞學類</a>
+                                    <a href="/edu/classify?type=大眾傳播學群&classify=廣告學類">廣告學類</a>
+                                    <a href="/edu/classify?type=大眾傳播學群&classify=廣播學類">廣播學類</a>
+                                    <a href="/edu/classify?type=大眾傳播學群&classify=其他學類">其他學類</a>
+                                </div>
+                            </div>
+                            <div>
+                                <a>語言學群</a>
+                                <input type="checkbox" id="first-eleven">
+                                <label for="first-eleven"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=語言學群&classify=英語文學類">英語文學類</a>
+                                    <a href="/edu/classify?type=語言學群&classify=漢語文學學類">漢語文學學類</a>
+                                    <a href="/edu/classify?type=語言學群&classify=歐語文學類">歐語文學類</a>
+                                    <a href="/edu/classify?type=語言學群&classify=東方語文學類">東方語文學類</a>
+                                    <a href="/edu/classify?type=語言學群&classify=日語文學類">日語文學類</a>
+
+                                </div>
+                            </div>
+                            <div>
+                                <a>休憩與運動學群</a>
+                                <input type="checkbox" id="first-twelve">
+                                <label for="first-twelve"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=休憩與運動學群&classify=體育學類">體育學類</a>
+                                    <a href="/edu/classify?type=休憩與運動學群&classify=休憩學類">休憩學類</a>
+                                </div>
+                            </div>
+                            <div>
+                                <a>建築與設計學群</a>
+                                <input type="checkbox" id="first-thirteen">
+                                <label for="first-thirteen"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=建築與設計學群&classify=數位媒體">數位媒體設計學類</a>
+                                    <a href="/edu/classify?type=建築與設計學群&classify=建築學類">建築學類</a>
+                                    <a href="/edu/classify?type=建築與設計學群&classify=都市計畫學類">都市計畫學類</a>
+                                    <a href="/edu/classify?type=建築與設計學群&classify=景觀與空間設計類">景觀與空間設計類</a>
+                                    <a href="/edu/classify?type=建築與設計學群&classify=工業設計學類">工業設計學類</a>
+                                    <a href="/edu/classify?type=建築與設計學群&classify=工藝學類">工藝學類</a>
+                                    <a href="/edu/classify?type=建築與設計學群&classify=商業設計學類">商業設計學類</a>
+                                    <a href="/edu/classify?type=建築與設計學群&classify=時尚與服裝設計學類">時尚與服裝設計學類</a>
+                                    <a href="/edu/classify?type=建築與設計學群&classify=藝術與設計學類">藝術與設計學類</a>
+                                    <a href="/edu/classify?type=建築與設計學群&classify=其他學類">其他學類</a>
+
+                                </div>
+                            </div>
+                            <div>
+                                <a>生涯學群</a>
+                                <input type="checkbox" id="first-fourteen">
+                                <label for="first-fourteen"><i class="fa fa-angle-down"></i></label>
+                                <div class="second">
+                                    <a href="/edu/classify?type=生涯學群&classify=資訊科技">資訊科技</a>
+                                    <a href="/edu/classify?type=生涯學群&classify=綜合知識">綜合知識</a>
+                                    <a href="/edu/classify?type=生涯學群&classify=行銷流通">行銷流通</a>
+                                    <a href="/edu/classify?type=生涯學群&classify=財務融通">財務融通</a>
+                                    <a href="/edu/classify?type=生涯學群&classify=人力資源">人力資源</a>
+                                    <a href="/edu/classify?type=生涯學群&classify=創業育成">創業育成</a>
+                                    <a href="/edu/classify?type=生涯學群&classify=證照檢定">證照檢定</a>
+                                </div>
+                            </div>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career">生涯規劃</a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+
+
+    </nav>
+    <!-- 主要內容 -->
+    <div class="wrap">
+        <!-- 麵包屑 -->
+        <div class="bread">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">首頁</a></li>
+                    <li class="breadcrumb-item"><a href="/edu">推廣教育</a></li>
+                    <li class="breadcrumb-item">{{type}}</li>
+                    <li class="breadcrumb-item">{{content}}</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="cource">
+            <div class="title">{{content}}</div>
+            <div class="courceContent">
+                <div class="column">
+                    <div>
+                        <input type="checkbox" id="first-one">
+                        <div class="second">
+                            {{{item}}}
+                        </div>
+                    </div>
+                </div>
+                <span>
+
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mainfooter text-center">
+        &copy; copyright by BraveDogTeam 2020
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+</body>
+<script>
+</script>
+
+</html>
