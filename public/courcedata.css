@@ -45,6 +45,8 @@
 
 .group img {
     width: 100%;
+    width: 200px;
+    height: 150px;
     max-width: 300px;
     max-height: 150px;
 }
