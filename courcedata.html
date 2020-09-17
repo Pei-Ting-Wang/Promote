@@ -251,9 +251,10 @@
         .then(res => res.json())
         .then(datas => {
             datas.forEach(data => {
+                console.log(data);
                 column.innerHTML += ` <div class="group">
                         <div class="img">
-                            <img src="${data['IMG_LINKWEB']}">
+                            <img src="${data['IMG_LINK']}">
                         </div>
                         <div class="content">
                             <a class="link" href="${data['WEB']}">${data['NAME']}
