@@ -10,6 +10,15 @@
     <link rel="stylesheet" type="text/css" href="./courceClassify.css">
     <link rel="stylesheet" type="text/css" href="./navbar.css">
     <link rel="stylesheet" type="text/css" href="./footer.css">
+    <link rel="stylesheet" type="text/css" href="./checked.css">
+    <style>
+        .group i {
+            position: absolute;
+            left: 200px;
+            top: 8px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -208,9 +217,11 @@
             <div class="courceContent">
                 <div class="column">
                     <div>
-                        <div class="group">
+                        <input type="checkbox" id="one">
+                        <label class="group" for="one">
                             資訊學群
-                        </div>
+                            <i class="fa fa-angle-down"></i>
+                        </label>
                         <div class="second">
                             <a href="./edu/classify?type=資訊學群&classify=軟體應用開發學類" class="classifyName">軟體應用開發學類</a>
                             <a href="./edu/classify?type=資訊學群&classify=網路應用開發學類" class="classifyName">網路應用開發學類</a>
@@ -218,168 +229,185 @@
                         </div>
                     </div>
                     <div>
-                        <div class="group">工程學群</div>
+                        <input type="checkbox" id="two">
+                        <label class="group" for="two">
+                            工程學群
+                            <i class="fa fa-angle-down"></i>
+                        </label>
                         <div class="second">
                             <a href="./edu/classify?type=工程學群&classify=工程學類" class="classifyName">工程學類</a>
                         </div>
                     </div>
                     <div>
 
-                        <input type="checkbox" id="first-three">
-                        <div class="group">
+                        <input type="checkbox" id="three">
+                        <label class="group" for="three">
                             數理化學群
-                        </div>
+                            <i class="fa fa-angle-down"></i>
+                        </label>
                         <div class="second">
                             <a href="./edu/classify?type=數理化學群&classify=數學學類" class="classifyName">數學學類</a>
-                            <a href="#" class="classifyName">物理學類</a>
-                            <a href="#" class="classifyName">化學學類</a>
+                            <a href="./edu/classify?type=數理化學群&classify=物理學類" class="classifyName">物理學類</a>
+                            <a href="./edu/classify?type=數理化學群&classify=化學學類" class="classifyName">化學學類</a>
                         </div>
                     </div>
                     <div>
-                        <input type="checkbox" id="first-four">
-                        <div class="group">
+                        <input type="checkbox" id="four">
+                        <label class="group" for="four">
                             醫藥衛生學群
-                        </div>
+                            <i class="fa fa-angle-down"></i>
+                        </label>
                         <div class="second">
-                            <a href="#" class="classifyName">醫療與護理學類</a>
-                            <a href="#" class="classifyName">營養學類</a>
-                            <a href="#" class="classifyName">公共衛生學類</a>
+                            <a href="./edu/classify?type=醫藥衛生學群&classify=醫療與護理學類" class="classifyName">醫療與護理學類</a>
+                            <a href="./edu/classify?type=醫藥衛生學群&classify=營養學類" class="classifyName">營養學類</a>
+                            <a href="./edu/classify?type=醫藥衛生學群&classify=公共衛生學類" class="classifyName">公共衛生學類</a>
                         </div>
                     </div>
                     <div>
-                        <input type="checkbox" id="first-five">
-                        <div class="group">
+                        <input type="checkbox" id="five">
+                        <label class="group" for="five">
                             自然科學學群
-                        </div>
+                            <i class="fa fa-angle-down"></i>
+                        </label>
                         <div class="second">
-                            <a href="#" class="classifyName">環境科學學類</a>
-                            <a href="#" class="classifyName">地球科學學類</a>
-                            <a href="#" class="classifyName">生命科學學類</a>
+                            <a href="./edu/classify?type=自然科學學群&classify=環境科學學類" class="classifyName">環境科學學類</a>
+                            <a href="./edu/classify?type=自然科學學群&classify=地球科學學類" class="classifyName">地球科學學類</a>
+                            <a href="./edu/classify?type=自然科學學群&classify=生命科學學類" class="classifyName">生命科學學類</a>
                         </div>
                     </div>
                     <div>
-                        <input type="checkbox" id="first-six">
-                        <div class="group">
+                        <input type="checkbox" id="six">
+                        <label class="group" for="six">
                             文史哲學群
-                        </div>
+                            <i class="fa fa-angle-down"></i>
+                        </label>
                         <div class="second">
-                            <a href="#" class="classifyName">中國文學類</a>
-                            <a href="#" class="classifyName">歷史學類</a>
-                            <a href="#" class="classifyName">哲學學類</a>
+                            <a href="./edu/classify?type=自然科學學群&classify=中國文學類" class="classifyName">中國文學類</a>
+                            <a href="./edu/classify?type=自然科學學群&classify=歷史學類" class="classifyName">歷史學類</a>
+                            <a href="./edu/classify?type=自然科學學群&classify=哲學學類" class="classifyName">哲學學類</a>
 
                         </div>
                     </div>
                     <div>
-                        <input type="checkbox" id="first-seven">
-                        <div class="group">
+                        <input type="checkbox" id="seven">
+                        <label class="group" for="seven">
                             商業與管理學群
-                        </div>
+                            <i class="fa fa-angle-down"></i>
+                        </label>
                         <div class="second">
-                            <a href="#" class="classifyName">管理學類</a>
-                            <a href="#" class="classifyName">歷史學類</a>
-                            <a href="#" class="classifyName">哲學學類</a>
+                            <a href="./edu/classify?type=商業與管理學群&classify=管理學類" class="classifyName">管理學類</a>
+                            <a href="./edu/classify?type=商業與管理學群&classify=歷史學類" class="classifyName">歷史學類</a>
+                            <a href="./edu/classify?type=商業與管理學群&classify=哲學學類" class="classifyName">哲學學類</a>
                         </div>
                     </div>
 
                     <div>
-                        <input type="checkbox" id="first-eight">
-                        <div class="group">
+                        <input type="checkbox" id="eight">
+                        <label class="group" for="eight">
                             藝術學群
-                        </div>
+                            <i class="fa fa-angle-down"></i>
+                        </label>
                         <div class="second">
-                            <a href="#" class="classifyName">音樂學類</a>
-                            <a href="#" class="classifyName">美術學類</a>
-                            <a href="#" class="classifyName">戲劇學類</a>
-                            <a href="#" class="classifyName">電影與新媒體學類</a>
-                            <a href="#" class="classifyName">其他學類</a>
+                            <a href="./edu/classify?type=藝術學群&classify=音樂學類" class="classifyName">音樂學類</a>
+                            <a href="./edu/classify?type=藝術學群&classify=美術學類" class="classifyName">美術學類</a>
+                            <a href="./edu/classify?type=藝術學群&classify=戲劇學類" class="classifyName">戲劇學類</a>
+                            <a href="./edu/classify?type=藝術學群&classify=電影與新媒體學類" class="classifyName">電影與新媒體學類</a>
+                            <a href="./edu/classify?type=藝術學群&classify=其他學類" class="classifyName">其他學類</a>
                         </div>
                     </div>
                     <div>
-                        <input type="checkbox" id="first-nine">
-                        <div class="group">
-                            社會與心理學群
-                        </div>
+                        <input type="checkbox" id="nine">
+                        <label class="group" for="nine">
+                            社會與心理學群 <i class="fa fa-angle-down"></i>
+                            <i class="fa fa-angle-down"></i>
+                        </label>
                         <div class="second">
-                            <a href="#" class="classifyName">法律類</a>
-                            <a href="#" class="classifyName">政治學類</a>
-                            <a href="#" class="classifyName">教育學類</a>
-                            <a href="#" class="classifyName">公共行政與社會工作類</a>
-                            <a href="#" class="classifyName">心理學類</a>
-                            <a href="#" class="classifyName">其他社會學類</a>
+                            <a href="./edu/classify?type=社會與心理學群&classify=法律類" class="classifyName">法律類</a>
+                            <a href="./edu/classify?type=社會與心理學群&classify=政治學類" class="classifyName">政治學類</a>
+                            <a href="./edu/classify?type=社會與心理學群&classify=教育學類" class="classifyName">教育學類</a>
+                            <a href="./edu/classify?type=社會與心理學群&classify=公共行政與社會工作類"
+                                class="classifyName">公共行政與社會工作類</a>
+                            <a href="./edu/classify?type=社會與心理學群&classify=心理學類" class="classifyName">心理學類</a>
+                            <a href="./edu/classify?type=社會與心理學群&classify=其他社會學類" class="classifyName">其他社會學類</a>
                         </div>
                     </div>
                     <!-- </div>
                 <div class="column"> -->
                     <div>
-                        <input type="checkbox" id="first-ten">
-                        <div class="group">
+                        <input type="checkbox" id="ten">
+                        <label class="group" for="ten">
                             大眾傳播學群
-                        </div>
+                            <i class="fa fa-angle-down"></i>
+                        </label>
                         <div class="second">
-                            <a href="#" class="classifyName">新聞學類</a>
-                            <a href="#" class="classifyName">廣告學類</a>
-                            <a href="#" class="classifyName">廣播學類</a>
-                            <a href="#" class="classifyName">其他學類</a>
+                            <a href="./edu/classify?type=大眾傳播學群&classify=新聞學類" class="classifyName">新聞學類</a>
+                            <a href="./edu/classify?type=大眾傳播學群&classify=廣告學類" class="classifyName">廣告學類</a>
+                            <a href="./edu/classify?type=大眾傳播學群&classify=廣播學類" class="classifyName">廣播學類</a>
+                            <a href="./edu/classify?type=大眾傳播學群&classify=其他學類" class="classifyName">其他學類</a>
                         </div>
                     </div>
                     <div>
-                        <input type="checkbox" id="first-eleven">
-                        <div class="group">
+                        <input type="checkbox" id="eleven">
+                        <label class="group" for="eleven">
                             語言學群
-                        </div>
+                            <i class="fa fa-angle-down"></i>
+                        </label>
                         <div class="second">
-                            <a href="#" class="classifyName">英語文學類</a>
-                            <a href="#" class="classifyName">漢語文學學類</a>
-                            <a href="#" class="classifyName">歐語文學類</a>
-                            <a href="#" class="classifyName">東方語文學類</a>
-                            <a href="#" class="classifyName">日語文學類</a>
+                            <a href="./edu/classify?type=語言學群&classify=英語文學類" class="classifyName">英語文學類</a>
+                            <a href="./edu/classify?type=語言學群&classify=漢語文學學類" class="classifyName">漢語文學學類</a>
+                            <a href="./edu/classify?type=語言學群&classify=歐語文學類" class="classifyName">歐語文學類</a>
+                            <a href="./edu/classify?type=語言學群&classify=東方語文學類" class="classifyName">東方語文學類</a>
+                            <a href="./edu/classify?type=語言學群&classify=日語文學類" class="classifyName">日語文學類</a>
 
                         </div>
                     </div>
                     <div>
-                        <input type="checkbox" id="first-twelve">
-                        <div class="group">
+                        <input type="checkbox" id="twelve">
+                        <label class="group" for="twelve">
                             休憩與運動學群
-                        </div>
+                            <i class="fa fa-angle-down"></i>
+                        </label>
                         <div class="second">
-                            <a href="#" class="classifyName">體育學類</a>
-                            <a href="#" class="classifyName">休憩學類</a>
+                            <a href="./edu/classify?type=休憩與運動學群&classify=體育學類" class="classifyName">體育學類</a>
+                            <a href="./edu/classify?type=休憩與運動學群&classify=休憩學類" class="classifyName">休憩學類</a>
                         </div>
                     </div>
                     <div>
 
-                        <input type="checkbox" id="first-thirteen">
-                        <div class="group">
+                        <input type="checkbox" id="thirteen">
+                        <label class="group" for="thirteen">
                             建築與設計學群
-                        </div>
+                            <i class="fa fa-angle-down"></i>
+                        </label>
                         <div class="second">
-                            <a href="#" class="classifyName">數位媒體設計學類</a>
-                            <a href="#" class="classifyName">建築學類</a>
-                            <a href="#" class="classifyName">都市計畫學類</a>
-                            <a href="#" class="classifyName">景觀與空間設計類</a>
-                            <a href="#" class="classifyName">工業設計學類</a>
-                            <a href="#" class="classifyName">工藝學類</a>
-                            <a href="#" class="classifyName">商業設計學類</a>
-                            <a href="#" class="classifyName">時尚與服裝設計學類</a>
-                            <a href="#" class="classifyName">藝術與設計學類</a>
-                            <a href="#" class="classifyName">其他學類</a>
+                            <a href="./edu/classify?type=建築與設計學群&classify=數位媒體學類" class="classifyName">數位媒體設計學類</a>
+                            <a href="./edu/classify?type=建築與設計學群&classify=建築學類" class="classifyName">建築學類</a>
+                            <a href="./edu/classify?type=建築與設計學群&classify=都市計畫學類" class="classifyName">都市計畫學類</a>
+                            <a href="./edu/classify?type=建築與設計學群&classify=景觀與空間設計類" class="classifyName">景觀與空間設計類</a>
+                            <a href="./edu/classify?type=建築與設計學群&classify=工業設計學類" class="classifyName">工業設計學類</a>
+                            <a href="./edu/classify?type=建築與設計學群&classify=工藝學類" class="classifyName">工藝學類</a>
+                            <a href="./edu/classify?type=建築與設計學群&classify=商業設計學類" class="classifyName">商業設計學類</a>
+                            <a href="./edu/classify?type=建築與設計學群&classify=時尚與服裝設計學類" class="classifyName">時尚與服裝設計學類</a>
+                            <a href="./edu/classify?type=建築與設計學群&classify=藝術與設計學類" class="classifyName">藝術與設計學類</a>
+                            <a href="./edu/classify?type=建築與設計學群&classify=其他學類" class="classifyName">其他學類</a>
 
                         </div>
                     </div>
                     <div>
 
-                        <input type="checkbox" id="first-fourteen">
-                        <div class="group">
+                        <input type="checkbox" id="fourteen">
+                        <label class="group" for="fourteen">
                             生涯學群
-                        </div>
-                        <div class="second">
-                            <a href="" class="classifyName">資訊科技</a>
-                            <a href="" class="classifyName">綜合知識</a>
-                            <a href="" class="classifyName">行銷流通</a>
-                            <a href="" class="classifyName">財務融通</a>
-                            <a href="" class="classifyName">人力資源</a>
-                            <a href="" class="classifyName">創業育成</a>
-                            <a href="" class="classifyName">證照檢定</a>
+                            <i class="fa fa-angle-down"></i>
+                        </label>
+                        <div class="second" id="123">
+                            <a href="./edu/classify?type=生涯學群&classify=資訊科技" class="classifyName">資訊科技</a>
+                            <a href="./edu/classify?type=生涯學群&classify=綜合知識" class="classifyName">綜合知識</a>
+                            <a href="./edu/classify?type=生涯學群&classify=行銷流通" class="classifyName">行銷流通</a>
+                            <a href="./edu/classify?type=生涯學群&classify=財務融通" class="classifyName">財務融通</a>
+                            <a href="./edu/classify?type=生涯學群&classify=人力資源" class="classifyName">人力資源</a>
+                            <a href="./edu/classify?type=生涯學群&classify=創業育成" class="classifyName">創業育成</a>
+                            <a href="./edu/classify?type=生涯學群&classify=證照檢定" class="classifyName">證照檢定</a>
                         </div>
                     </div>
                 </div>
@@ -405,6 +433,7 @@
 
 </body>
 <script>
+
 </script>
 
 </html>

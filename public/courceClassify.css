@@ -37,6 +37,9 @@
 .courceContent .column .group {
     color: #233D4D;
     font-weight: bold;
+    position: relative;
+    justify-content: center;
+    align-items: center;
     background-color:#FFE153;
     padding: 5px;
     text-align:center;
