@@ -40,6 +40,10 @@ app.get('/group',(req,res)=>{
         });
     })
 });
+app.get('/groupname',(req,res)=>{
+    name=getData()
+    res.json({ groupname: name })
+})
 function setData(data){
     groupname=data;
 }
