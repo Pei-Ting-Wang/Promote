@@ -246,13 +246,24 @@
 
 </body>
 <script>
-   let column = document.querySelector('.column');
-    fetch('/group')
-        .then(res => res.json())
-        .then(datas => {
-            datas.forEach(data => {
-                console.log(data);
-                column.innerHTML += ` <div class="group">
+
+    window.addEventListener("load", () => {
+        let column = document.querySelector('.column');
+        let groupname = document.querySelector('.breadcrumb');
+        fetch('/groupname')
+            .then(res => res.json())
+            .then(datas => {
+                groupname.innerHTML = `<li class="breadcrumb-item"><a href="/">首頁</a></li>
+                    <li class="breadcrumb-item"><a href="/open">開放式課程</a></li>
+                    <li class="breadcrumb-item">${datas['groupname']}</li>`;
+
+            })
+
+        fetch('/group')
+            .then(res => res.json())
+            .then(datas => {
+                datas.forEach(data => {
+                    column.innerHTML += ` <div class="group">
                         <div class="img">
                             <img src="${data['IMG_LINK']}">
                         </div>
@@ -262,10 +273,10 @@
                             <div class="source">來源名稱:${data['CF']}</div>
                         </div>
                     </div>`
-            });
+                });
 
-        })
-
+            })
+    });
 
 </script>
 
