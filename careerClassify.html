@@ -216,7 +216,6 @@
             </nav>
         </div>
         <div class="cource">
-            <div class="title">生涯規劃</div>
             <div class="courceContent">
                 <div class="column">
                     <div>
@@ -225,15 +224,19 @@
                             生涯輔導
                         </div>
                         <div class="second tutor">
-
+                            
+                              
+                            
                         </div>
                     </div>
                     <div>
                         <input type="checkbox" id="first-two">
-                        <div class="group ">
+                        <div class="group">
                             國際及體驗學習
                         </div>
                         <div class="second experience">
+                          
+                
                         </div>
                     </div>
                     <div>
@@ -278,7 +281,7 @@
         .then(res => res.json())
         .then(datas => {
             datas.forEach(data => {
-                tutor.innerHTML += `<a href="${data['WEB']}" class="classifyName">${data['NAME']}</a>`;
+                tutor.innerHTML += `<a href="${data['WEB']}" class="classifyName">${data['NAME']}</a> <p>${data['DATE']}</p>`;
             })
         })
         .catch(err => {
@@ -288,7 +291,9 @@
         .then(res => res.json())
         .then(datas => {
             datas.forEach(data => {
-                experience.innerHTML += `<a href="${data['WEB']}" class="classifyName">${data['NAME']}</a>`;
+                console.log(data);
+                experience.innerHTML += `<a href="${data['WEB']}" class="classifyName">${data['NAME']}</a> 
+                <p>${data['DATE']}</p>`;
             })
         })
         .catch(err => {
@@ -299,7 +304,7 @@
         .then(res => res.json())
         .then(datas => {
             datas.forEach(data => {
-                recruit.innerHTML += `<a href="${data['WEB']}" class="classifyName">${data['NAME']}</a>`;
+                recruit.innerHTML += `<a href="${data['WEB']}" class="classifyName">${data['NAME']}</a> <p>${data['DATE']}</p>`;
             })
         })
         .catch(err => {
