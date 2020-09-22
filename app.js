@@ -60,9 +60,8 @@ app.get('/edu/classify', (req, res) => {
             if (err) console.error(err);
             console.log(typeof (rows));
             rows.forEach(row => {
-                console.log(row['課程名稱'] + row['網址']);
-                data += `<a href="https:/google.com" target="_blank">${row['課程名稱']}</a>`;
-
+                console.log(row['NAME'] + row['WEB']);
+                data += `<a href="https:/google.com" target="_blank">${row['NAME']}</a>`;
             });
             res.render('layout', {
                 type: req.query.type,

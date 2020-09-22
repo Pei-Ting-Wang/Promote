@@ -1,6 +1,6 @@
 .wrap {
     width: 100%;
-    background-color: #233D4D;
+    background-color: #2D393A;
     color:#fff;
     min-height: 540px;
 }
@@ -35,17 +35,18 @@
 
 
 .courceContent .column .group {
-    color: #233D4D;
+    color: #2D393A;
     font-weight: bold;
     background-color:#FF8811;  
-    padding: 5px;
+    padding: 10px;
+    font-size: large;
     text-align:center;
 }
 
 .courceContent .column .second a {
     padding: 5px;
     text-decoration: none;
-    color:#000;
+    color:#053061;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
